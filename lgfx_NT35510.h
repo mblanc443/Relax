@@ -77,10 +77,10 @@ public:LGFX(void){
     cfg.freq     = 1000000;   // Set SPI clock, Max 2.5MHz, 8-bit (7-bit) mode
 
     cfg.pin_sclk = GPIO_NUM_42;  // SCLK (TP CLK)
-    cfg.pin_mosi = GPIO_NUM_44;  // MOSI (TP DIN)
+    cfg.pin_mosi = GPIO_NUM_40;  // MOSI (TP DIN)
     cfg.pin_miso = GPIO_NUM_43;  // MISO (TP DOUT)
     cfg.pin_cs   = GPIO_NUM_41;  // CS   (TP CS)
-    //cfg.pin_irq = GPIO_NUM_1;
+    //cfg.pin_irq = GPIO_NUM_20;
 
     _touch_instance.config(cfg);
     _panel_instance.setTouch(&_touch_instance); // Set the touchscreen to the panel
