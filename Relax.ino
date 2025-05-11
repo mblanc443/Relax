@@ -118,28 +118,6 @@ void drawGraph(int grTop, int grBottom, int grLeft, int grRight) {
     } 
 }
 
-// with one line updated to one point every 1 sec
-void drawGraphNew() {
-    static int lastX = 40; // Start position for the graph line
-    static int lastY = 400; // Middle of the screen (adjust if needed)
-    
-    int newX = lastX + 10; // Move 10 pixels to the right every second
-    if (newX > 440) {  // Reset when reaching the end
-        newX = 40;
-        lastY = 400;  // Reset position
-        tft.fillRect(20, 60, 400, 720, TFT_NAVY); // Clear graph area only
-    }
-
-    int newY = random(200, 600); // Example data, replace with actual graph value
-
-    // Draw the graph line in yellow
-    tft.drawLine(lastX, lastY, newX, newY, TFT_YELLOW);
-
-    lastX = newX;
-    lastY = newY;
-}
-
-
 //
 void updateGraph(int grTop, int grBottom, int grLeft, int grRight) {
   static int lastUpdate = 0;
