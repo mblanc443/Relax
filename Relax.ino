@@ -1,4 +1,5 @@
-#pragma GCC optimize ("Ofast")
+#pragma GCC optimize ("-O3")  // Fast but standards-compliant
+//
 #define LGFX_USE_V1
 #include <LovyanGFX.hpp>
 #include <Arduino.h>
